@@ -1,0 +1,13 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build", "^prepack"],
+      "outputs": ["dist/**"]
+    },
+    "prepack": {
+      "dependsOn": ["^build"]
+    }
+  },
+  "globalDependencies": ["tsconfig.json"]
+}

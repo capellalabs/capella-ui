@@ -1,0 +1,39 @@
+{
+  "name": "@capella/react",
+  "version": "0.0.1",
+  "author": "Emad Baqeri <ebaqeri@protonmail.com>",
+  "license": "MIT",
+  "types": "dist/index.d.ts",
+  "main": "dist/esm/index.js",
+  "module": "dist/cjs/index.mjs",
+  "scripts": {
+    "build": "rollup --config ./rollup.config.js",
+    "prepack": "clean-package"
+  },
+  "clean-package": "../../clean-package.config.json",
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.18.6",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "clean-package": "^2.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup-plugin-dts": "^5.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/cjs/index.mjs",
+      "require": "./dist/esm/index.js"
+    },
+    "./package.json": "./package.json"
+  }
+}
